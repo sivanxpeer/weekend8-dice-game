@@ -12,6 +12,7 @@ export default class Button extends React.Component {
                 <button onClick={console.log("click")}>Roll Dice</button>
                 <button onClick={console.log("click")}>Hold</button>
                 
+                
             </div>
         )
 
