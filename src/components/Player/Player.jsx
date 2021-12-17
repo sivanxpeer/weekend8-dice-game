@@ -7,6 +7,7 @@
 
 
 import React from 'react';
+import './Player.css'
 
 export default class Player extends React.Component {
     constructor(props) {
@@ -18,12 +19,12 @@ export default class Player extends React.Component {
     }
     render = () => {
         // const whoIsThePlayer = {turn};
-        //after if 
+        // after if 
         return (
         <div className="player">
-            <div className="player-Name">{this.state.name}</div>
-            <div className="player-Score">{this.props.score}</div>
-            <div className="player-Current">{this.props.currentScore}</div>
+            <div className="player-style player-name">{this.state.name}</div>
+            <div className="player-style player-score">{this.props.score}</div>
+            <div className="player-style player-current">{this.props.currentScore}</div>
         </div>
         )
     }

@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+.player{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    border: 1px solid #282c34;
+    height:100vh;
+    width:40vw;
+    padding: 5px;
+    /* justify-content:space-around; */
+  }
+
+  .player-style{
+    width: 20%;
+    height: 10%;
+    display: flex;
+    justify-content:center; 
+    align-items: center;
+    border:1px solid #282c34;
+    margin: 10px;
+  }

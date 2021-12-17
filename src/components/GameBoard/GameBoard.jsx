@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
+import Game from "../Game/Game";
 
 export default class GameBoard extends React.Component {
     constructor(props) {
@@ -9,8 +10,10 @@ export default class GameBoard extends React.Component {
         }
     }
     render() {
-        return (                
-            <Button></Button>
+        return (
+            <div className="GameBoard">
+                <Button></Button>
+            </div>
         );
-}
+    }
 }

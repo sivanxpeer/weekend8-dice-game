@@ -7,7 +7,9 @@
 
 
 import React from 'react';
+import GameBoard from '../GameBoard/GameBoard';
 import Player from '../Player/Player';
+import './Game.css';
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -21,10 +23,11 @@ export default class Game extends React.Component {
         // const whoIsThePlayer = {turn};
         //after if 
         return (
-            <div>
-                <div className="player1">
-                    <Player />
-                </div>
+            <div className="GameContainer">
+                <Player name="Player 1" score="SCORE-PLAYER1" currentScore="Current1"/>
+                <GameBoard/>
+                <Player name="Player 2" score ="SCORE-PLAYER2" currentScore="Current2"/>
+
             </div>
         )
     }
