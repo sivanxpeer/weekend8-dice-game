@@ -14,7 +14,10 @@ export default class Player extends React.Component {
         super(props);
         this.state = {
           name: this.props.name,
-          turn: false  
+          turn: false,
+          winner: false,
+          score:0, 
+        //   activeColor: false,
          }
     }
     render = () => {

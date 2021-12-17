@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Dice.css'
 
 // image1 = import(/assets/images / dice_icon_01);
 // image2 = import(/assets/images / dice_icon_02);
@@ -7,6 +7,9 @@ import React from "react";
 // image4 = import(/assets/images / dice_icon_04);
 // image5 = import(/assets/images / dice_icon_05);
 // image6 = import(/assets/images / dice_icon_06);
+
+const DiceImage = ["image-1","image-2","image-3","image-4","image-5","image-6"];
+
 export default class Dice extends React.Component {
 
     // constructor(props) {
@@ -21,10 +24,13 @@ export default class Dice extends React.Component {
     //     }
     // }
 
+    pickDice=(array)=>{
+        return array[Math.floor(Math.random()*6)+1];
+    }
+
     render = () => {
         return (
-            <div>
-
+            <div className={this.pickDice(DiceImage)}>
             </div>
         );
     }

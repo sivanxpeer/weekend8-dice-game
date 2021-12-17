@@ -1,19 +1,24 @@
-    /* .image-1 {
-      background-image: url("/src/Assets/dice-1.png");
+    .image-1 {
+      background: url("/assets/images/dice_icon_01.png")no-repeat center center/cover;
     }
     .image-2 {
-      background-image: url("/src/Assets/dice-2.png");
+      background: url("/assets/images/dice_icon_02.png")no-repeat center center/cover;
     }
     .image-3 {
-      background-image: url("/src/Assets/dice-3.png");
+      background: url("/assets/images/dice_icon_03.png")no-repeat center center/cover;
     }
     .image-4 {
-      background-image: url("/src/Assets/dice-4.png");
+      background: url("/assets/images/dice_icon_04.png")no-repeat center center/cover;
     }
     .image-5 {
-      background-image: url("/src/Assets/dice-5.png");
+      background: url("/assets/images/dice_icon_05.png")no-repeat center center/cover;
     }
     .image-6 {
-      background-image: url("/src/Assets/dice-6.png");
+      background: url("/assets/images/dice_icon_06.png")no-repeat center center/cover;
     }
-     */
+    
+    .image-1,.image-2,.image-3,.image-4,.image-5,.image-6{
+      width:200px;
+      height:200px;
+      /* padding:5%; */
+    }
