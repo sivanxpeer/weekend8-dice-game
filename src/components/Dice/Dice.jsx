@@ -22,7 +22,7 @@ export default class Dice extends React.Component {
         const secondDice = this.rollDice();
         this.setState({ dices: [firstDice, secondDice] });
         this.props.currentScore(firstDice + secondDice);
-        console.log(firstDice,secondDice,this.currentScore);
+        // console.log(firstDice,secondDice,this.currentScore);
     }
 
     // constructor(props) {
@@ -39,9 +39,9 @@ export default class Dice extends React.Component {
 
     pickDice = (array) => {
         let res = array[Math.floor(Math.random() * 6)];
-        let num = parseInt(res.match(/\d+/)[0]);
-        let sum = 0;
-        sum = sum + num;
+        // let num = parseInt(res.match(/\d+/)[0]);
+        // let sum = 0;
+        // sum = sum + num;
         // console.log(res);
         // console.log(num);
         // console.log(sum);
@@ -50,7 +50,7 @@ export default class Dice extends React.Component {
 
     rollDice() {
         let arr = [this.randomDie(), this.randomDie()];
-        this.sumOfRoll();
+        // this.sumOfRoll(); 
         console.log(arr);
         return arr;
     }

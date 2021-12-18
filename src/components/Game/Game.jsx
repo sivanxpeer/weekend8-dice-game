@@ -29,10 +29,8 @@ export default class Game extends React.Component {
         return (
             <div className="Game">
                 <Player name="Player 1" score="SCORE-PLAYER1" currentScore="Current1"/>
-                {/* <GameBoard/> */}
                 <Button/>
                 <Player name="Player 2" score ="SCORE-PLAYER2" currentScore="Current2"/>
-
             </div>
         )
     }
