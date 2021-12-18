@@ -17,7 +17,6 @@ export default class Player extends React.Component {
           turn: false,
           winner: false,
           score:0, 
-        //   activeColor: false,
          }
     }
     render = () => {

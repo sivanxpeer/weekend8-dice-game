@@ -10,10 +10,6 @@ import './Dice.css'
 
 const DiceImage = ["image-1", "image-2", "image-3", "image-4", "image-5", "image-6"];
 
-// rollDice=()=>{
-
-// }
-
 export default class Dice extends React.Component {
 
     state = {
