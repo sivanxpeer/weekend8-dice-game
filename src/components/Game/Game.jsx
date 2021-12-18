@@ -22,6 +22,7 @@ export default class Game extends React.Component {
             players: ["player1","player2"],
         }
     }
+
     render = () => {
         // const whoIsThePlayer = {turn};
         //after if 

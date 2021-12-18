@@ -8,9 +8,26 @@ import './Dice.css'
 // image5 = import(/assets/images / dice_icon_05);
 // image6 = import(/assets/images / dice_icon_06);
 
-const DiceImage = ["image-1","image-2","image-3","image-4","image-5","image-6"];
+const DiceImage = ["image-1", "image-2", "image-3", "image-4", "image-5", "image-6"];
+
+// rollDice=()=>{
+
+// }
 
 export default class Dice extends React.Component {
+
+    state = {
+        dices:[null, null],
+        currentScore:0
+    }
+
+    sumOfRoll = () => {
+        const firstDice = this.rollDice();
+        const secondDice = this.rollDice();
+        this.setState({ dices: [firstDice, secondDice] });
+        this.props.currentScore(firstDice + secondDice);
+        console.log(firstDice,secondDice,this.currentScore);
+    }
 
     // constructor(props) {
     //     super(props);
@@ -24,10 +41,23 @@ export default class Dice extends React.Component {
     //     }
     // }
 
-    pickDice=(array)=>{
-        return array[Math.floor(Math.random()*6)+1];
+    pickDice = (array) => {
+        let res = array[Math.floor(Math.random() * 6)];
+        let num = parseInt(res.match(/\d+/)[0]);
+        let sum = 0;
+        sum = sum + num;
+        // console.log(res);
+        // console.log(num);
+        // console.log(sum);
+        return res;
     }
 
+    rollDice() {
+        let arr = [this.randomDie(), this.randomDie()];
+        this.sumOfRoll();
+        console.log(arr);
+        return arr;
+    }
     render = () => {
         return (
             <div className={this.pickDice(DiceImage)}>
