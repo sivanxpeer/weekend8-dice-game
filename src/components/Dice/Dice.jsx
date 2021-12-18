@@ -48,12 +48,12 @@ export default class Dice extends React.Component {
         return res;
     }
 
-    rollDice() {
-        let arr = [this.randomDie(), this.randomDie()];
-        // this.sumOfRoll(); 
-        console.log(arr);
-        return arr;
-    }
+    // rollDice() {
+    //     // let arr = [this.randomDie(), this.randomDie()];
+    //     // this.sumOfRoll(); 
+    //     console.log(arr);
+    //     return arr[];
+    // }
     render = () => {
         return (
             <div className={this.pickDice(DiceImage)}>
