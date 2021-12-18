@@ -1,7 +1,7 @@
 .Game{
     display:flex;
     flex-direction: space-between;
-    width:100%;
+    /* width:100%; */
 }
 
 
@@ -10,4 +10,5 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
+    width:15rem;
 }

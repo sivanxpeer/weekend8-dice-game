@@ -10,15 +10,15 @@ import React from 'react';
 import './Player.css'
 
 export default class Player extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+    // constructor(props) {
+    //     super(props);
+        state = {
           name: this.props.name,
           turn: false,
           winner: false,
           score:0, 
          }
-    }
+    // }
     render = () => {
         // const whoIsThePlayer = {turn};
         // after if 
