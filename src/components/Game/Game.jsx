@@ -11,18 +11,8 @@ import React from 'react';
 import Dice from '../Dice/Dice';
 import Player from '../Player/Player';
 import './Game.css';
+import Music from '../Music/Music';
 
-// old function : chaneg the player +update the current score .
-
-//input function .
-
-//css again ! .
-
-// winner function. 
-
-//reload the game.
-
-// change the image of dice 1.
 
 const DiceImage = ["image-1", "image-2", "image-3", "image-4", "image-5", "image-6"];
 export default class Game extends React.Component {
@@ -113,7 +103,9 @@ export default class Game extends React.Component {
                         <h4 className='heading1'>Roll the Dice</h4>
 
                         <button onClick={() => window.location.reload()}>New Game</button>
+                   
                         <button onClick={this.rollDice}>Roll Dice</button>
+                        <Music />
                         <button onClick={this.hold}>Hold</button>
                         <Dice number={this.state.dice1Number} />
                         <Dice number={this.state.dice2Number} />
