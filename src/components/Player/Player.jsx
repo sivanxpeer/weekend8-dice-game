@@ -26,7 +26,7 @@ export default class Player extends React.Component {
         <div className="player">
             <div className="player-style player-name">{this.state.name}</div>
             <div className="player-style player-score">{this.props.score}</div>
-            <div className="player-style player-current">{this.props.currentScore}</div>
+            <div className="player-style player-current">Current: {this.props.currentScore}</div>
         </div>
         )
     }

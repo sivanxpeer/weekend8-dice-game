@@ -29,22 +29,17 @@ export default class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            nextTurnOf :"Player1",
-            currentScoreP1 :0,
-            currentScoreP2:0,
+            nextTurnOf: "Player1",
+            currentScoreP1: 0,
+            currentScoreP2: 0,
             dice1Number: 0,
-            dice2Number : 0,
-        
-
-        // NextTurnOf: "Player2",
-            maxPoints: 0,
-            // currentScoreP1: 0,
-            // currentScoreP2: 0,
-            totalScoreP1: 0,
-            totalScoreP2: 0,
+            dice2Number: 0,
+            totalScoreP1:0,
+            totalScoreP2:0,
+            winningScore:0,
             // dice1Number: 0,
             // dice2Number: 0,
-            players: ["player1", "player2"],
+            // players: ["player1", "player2"],
         }
     }
     pickDice = (array) => {
@@ -54,23 +49,28 @@ export default class Game extends React.Component {
     }
 
     rollDice = () => {
-        console.log("HERE", this.nextTurnOf);
-        this.setState({ dice1Number: this.pickDice(DiceImage).diceNumber });
-        this.setState({ dice2Number: this.pickDice(DiceImage).diceNumber });
-        // this.setState({ currentScoreP2: this.pickDice(DiceImage).diceNumber });
-        // console.log("here2", this.dice1Number, this.dice2Number);
+        this.setState({ dice1Number: this.pickDice(DiceImage).diceNumber,dice2Number: this.pickDice(DiceImage).diceNumber},()=>{
+            let sum = this.state.dice1Number+this.state.dice2Number;
         if (this.state.nextTurnOf === "Player1") {
-            this.setState({ currentScoreP1: this.state.dice1Number + this.state.dice2Number })
-            console.log(this.state.nextTurnOf);
-            
-        }
-        else {
-            this.setState({ currentScoreP2: this.state.dice1Number + this.state.dice2Number });
-            // this.setState({currentScoreP2:sum});
+            // if(this.state.dice1Number===6 && this.state.dice2Number===6){
 
+            // }
+            this.setState({ currentScoreP1: this.state.currentScoreP1+= sum })
         }
-        // this.setState({currentScoreP2:dice2});
+        if(this.state.nextTurnOf === "Player2"){
+            this.setState({ currentScoreP2: this.state.currentScoreP2+= sum});
+        }
+        });
     }
+
+    hold=(e)=>{
+
+    }
+
+    // isWinner(totalScore) {
+    //     return totalScore >= this.state.winningScore;
+    //   }
+    
 
     render = () => {
         // const whoIsThePlayer = {turn};
@@ -78,15 +78,21 @@ export default class Game extends React.Component {
         return (
             <>
                 <div className="Game">
-                    <Player name="Player 1" score="SCORE-PLAYER1" currentScore={this.state.dice1Number + this.state.dice2Number} />
+                    <Player name="Player 1" score={this.state.totalScoreP1} currentScore={this.state.currentScoreP1} />
                     <div className="Buttons-container">
                         <button onClick={() => window.location.reload()}>New Game</button>
                         <button onClick={this.rollDice}>Roll Dice</button>
-                        <button onClick={console.log("click")}>Hold</button>
+                        <button onClick={this.hold}>Hold</button>
                         <Dice number={this.state.dice1Number} />
                         <Dice number={this.state.dice2Number} />
+                        <input
+                            className={this.props.winningScoreClass}
+                            type="text"
+                            placeholder="Winning Score: 100pt"
+                        />
+
                     </div>
-                    <Player name="Player 2" score="SCORE-PLAYER2" currentScore={this.state.currentScoreP2} />
+                    <Player name="Player 2" score={this.state.totalScoreP2} currentScore={this.state.currentScoreP2} />
                 </div>
             </>
         )
