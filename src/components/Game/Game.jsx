@@ -49,22 +49,23 @@ export default class Game extends React.Component {
     }
 
     rollDice = () => {
+        // console.log("HERE", this.nextTurnOf);
         this.setState({ dice1Number: this.pickDice(DiceImage).diceNumber,dice2Number: this.pickDice(DiceImage).diceNumber},()=>{
             let sum = this.state.dice1Number+this.state.dice2Number;
         if (this.state.nextTurnOf === "Player1") {
             // if(this.state.dice1Number===6 && this.state.dice2Number===6){
 
             // }
-            this.setState({ currentScoreP1: this.state.currentScoreP1+= sum })
+            this.setState({ currentScoreP1: this.state.currentScoreP1+ sum })
         }
         if(this.state.nextTurnOf === "Player2"){
-            this.setState({ currentScoreP2: this.state.currentScoreP2+= sum});
+            this.setState({ currentScoreP2: this.state.currentScoreP2+ sum});
         }
         });
     }
 
     hold=(e)=>{
-
+        
     }
 
     // isWinner(totalScore) {
