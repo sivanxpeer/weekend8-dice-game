@@ -14,10 +14,20 @@ margin: 0 5px;
   padding: 20px;
   width: 18rem;
   height: 100%;
-  background-color: #b9b913;
+  background-color:    rgb(255, 184, 91);
 }
 
+button{
+padding: 5px;
+border-radius: 1rem;
+border:none;
+margin: 4px;
+}
 
+button:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
 .heading1, .heading2{
     padding: 1rem;
 }
