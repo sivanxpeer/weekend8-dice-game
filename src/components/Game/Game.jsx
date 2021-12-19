@@ -110,12 +110,16 @@ export default class Game extends React.Component {
                 <div className="Game">
                     <Player name="Player 1" score={this.state.totalScoreP1} currentScore={this.state.currentScoreP1} />
                     <div className="Buttons-container">
+                        <h4>Roll the dice and start playing</h4>
+
                         <button onClick={() => window.location.reload()}>New Game</button>
                         <button onClick={this.rollDice}>Roll Dice</button>
                         <button onClick={this.hold}>Hold</button>
                         <Dice number={this.state.dice1Number} />
                         <Dice number={this.state.dice2Number} />
+                        <h4>Insert points to win:</h4>
                         <input
+
                             className={this.props.winningScoreClass}
                             value={this.state.winningScore}
                             type="text"
