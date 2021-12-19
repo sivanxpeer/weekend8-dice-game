@@ -36,10 +36,7 @@ export default class Game extends React.Component {
             dice2Number: 0,
             totalScoreP1:0,
             totalScoreP2:0,
-            winningScore:0,
-            // dice1Number: 0,
-            // dice2Number: 0,
-            // players: ["player1", "player2"],
+            winningScore:100,
         }
     }
     pickDice = (array) => {
@@ -64,9 +61,30 @@ export default class Game extends React.Component {
         });
     }
 
-    hold=(e)=>{
-        
+    hold=()=>{
+        if(this.state.nextTurnOf==="Player1"){
+            if(this.state.currentScoreP1<this.state.winningScore){
+            let sum1 = this.state.currentScoreP1+this.state.totalScoreP1;
+            console.log(sum1);
+            this.setState({totalScoreP1: sum1});
+            this.setState({currentScoreP1:0});
+            this.setState({nextTurnOf:"Player2"});
+        }}
+        if(this.state.nextTurnOf==="Player2"){
+            if(this.state.currentScoreP2<this.state.winningScore){
+            let sum2 = this.state.currentScoreP2+this.state.totalScoreP2;
+            this.setState({totalScoreP2:sum2});
+            this.setState({currentScoreP2:0});
+            this.setState({nextTurnOf:"Player1"});
+
+        }}
+
     }
+
+//     checkForWin(){ 
+
+//     }
+// ?
 
     // isWinner(totalScore) {
     //     return totalScore >= this.state.winningScore;
