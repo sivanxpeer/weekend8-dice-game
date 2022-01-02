@@ -1,7 +1,7 @@
 
 
 # weekend project - react basics
-#    https://dice-game-s.netlify.app/
+###    https://dice-game-s.netlify.app/
 
 
 # TODO-
